@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="shop.css" />
   </head>
 
-  <body class="bg">
+  <body>
     <div class="header">
       <div class="left">
         <div class="menu">
           <button class="menu-button">
-            <img src="icons/hamburger-menu.png" class="menu-icon">
+            <img src="icons/hamburger-menu.png" class="menu-icon" />
           </button>
         </div>
       </div>
@@ -38,7 +38,10 @@
       <div class="product">
         <div class="product_image">
           <div class="front">
-            <img class="image" src="icons/front.jpg" />
+            <img
+              class="image"
+              src="http://127.0.0.1:5500/e%20commerce/icons/front.jpg"
+            />
           </div>
           <div class="back">
             <img class="image2" src="icons/back.jpg" />
@@ -226,6 +229,23 @@
         </div>
       </div>
     </div>
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="sizes">
+        <div class="close">
+          <img style="height: 35px" src="icons/close.png" />
+        </div>
+        <button class="sizeBtn">XS</button>
+        <button class="sizeBtn">S</button>
+        <button class="sizeBtn">M</button>
+        <button class="sizeBtn">L</button>
+        <button class="sizeBtn">XL</button>
+      </div>
+      <div>
+        <button class="modal-cart">Add to Cart</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
