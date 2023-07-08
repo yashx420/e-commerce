@@ -4,6 +4,13 @@ const x = function () {
   console.log(document.querySelector(".search-bar").value);
 };
 
+const y = function () {
+  var bar = document.querySelector(".search-bar");
+  bar.style.height = "30px";
+  bar.style.width = "370px";
+  document.querySelector(".search-section").style.maxWidth = "430px";
+};
+
 const cart = document.querySelectorAll(".cart");
 const sizes = document.querySelectorAll(".sizeBtn");
 const modal = document.querySelector(".modal");
@@ -12,9 +19,25 @@ const overlay = document.querySelector(".overlay");
 const openMenu = function () {
   var change = document.querySelector(".filterTab");
   var productz = document.querySelector(".products");
+  var close = document.querySelector(".menu-button-close");
+  var openm = document.querySelector(".menu-button");
   change.style.opacity = "1";
   change.style.left = "0";
+  close.style.zIndex = "1";
+  openm.style.zIndex = "0";
   productz.style.left = "20px";
+};
+
+const closeMenu = function () {
+  var change = document.querySelector(".filterTab");
+  var productz = document.querySelector(".products");
+  var openm = document.querySelector(".menu-button");
+  var close = document.querySelector(".menu-button-close");
+  change.style.opacity = "0";
+  change.style.left = "-180px";
+  productz.style.left = "-30px";
+  openm.style.zIndex = "1";
+  close.style.zIndex = "0";
 };
 
 const openModal = function () {
@@ -52,4 +75,8 @@ document.querySelector(".close").addEventListener("click", function () {
 });
 
 document.querySelector(".search-button").addEventListener("click", x);
+document.querySelector(".search-bar").addEventListener("click", y);
 document.querySelector(".menu-button").addEventListener("click", openMenu);
+document
+  .querySelector(".menu-button-close")
+  .addEventListener("click", closeMenu);
